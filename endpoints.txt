@@ -1,0 +1,63 @@
+
+# Partners
+# v1
+# https://hq.appsflyer.com/export/{app-id}/partners_report/v5
+# v2
+# https://hq1.appsflyer.com/api/agg-data/export/app/{app-id}/partners_report/v5
+
+
+# Partners daily
+# v1
+# https://hq.appsflyer.com/export/{app-id}/partners_by_date_report/v5
+# v2
+# https://hq1.appsflyer.com/api/agg-data/export/app/{app-id}/partners_by_date_report/v5
+
+
+# Daily
+# v1
+# https://hq.appsflyer.com/export/{app-id}/daily_report/v5
+# v2
+# https://hq1.appsflyer.com/api/agg-data/export/app/{app-id}/daily_report/v5
+
+
+# Geo
+# v1
+# https://hq.appsflyer.com/export/{app-id}/geo_report/v5
+# v2
+# https://hq1.appsflyer.com/api/agg-data/export/app/{app-id}/geo_report/v5
+
+
+# Geo Daily
+# v1
+# https://hq.appsflyer.com/export/{app-id}/geo_by_date_report/v5
+# v2
+# https://hq1.appsflyer.com/api/agg-data/export/app/{app-id}/geo_by_date_report/v5
+
+
+
+# Installs
+# v1
+# https://hq.appsflyer.com/export/{app-id}/installs_report/v5
+# v2
+# https://hq1.appsflyer.com/api/raw-data/export/app/{app-id}/installs_report/v5
+
+
+# In app events
+# v1
+# https://hq.appsflyer.com/export/{app-id}/in_app_events_report/v5
+# v2
+# https://hq1.appsflyer.com/api/raw-data/export/app/{app-id}/in_app_events_report/v5
+
+
+# Uninstalls
+# v1
+# https://hq.appsflyer.com/export/{app-id}/uninstall_events_report/v5
+# v2
+# https://hq1.appsflyer.com/api/raw-data/export/app/{app-id}/uninstall_events_report/v5
+
+
+# Reinstalls
+# v1
+# https://hq.appsflyer.com/export/{app-id}/reinstalls/v5
+# v2
+# https://hq1.appsflyer.com/api/raw-data/export/app/{app-id}/reinstalls/v5
