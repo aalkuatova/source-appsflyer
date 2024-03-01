@@ -284,6 +284,25 @@ class RetargetingGeoReport(RetargetingMixin, GeoReport):
     main_fields = fields.retargeting_geo_report.main_fields
 
 
+class OrganicUninstallEvents(RawDataMixin, IncrementalAppsflyerStream):
+    cursor_field = "event_time"
+    additional_fields = fields.uninstall_events.additional_fields
+
+    def path(
+        self, stream_state: Mapping[str, Any] = None, stream_slice: Mapping[str, Any] = None, next_page_token: Mapping[str, Any] = None
+    ) -> str:
+        return f"api/raw-data/export/app/{self.app_id}/organic_uninstall_events_report/v5"
+
+
+class OrganicInstalls(RawDataMixin, IncrementalAppsflyerStream):
+    cursor_field = "install_time"
+
+    def path(
+        self, stream_state: Mapping[str, Any] = None, stream_slice: Mapping[str, Any] = None, next_page_token: Mapping[str, Any] = None
+    ) -> str:
+        return f"api/raw-data/export/app/{self.app_id}/organic_installs_report/v5"
+
+
 # Source
 class SourceAppsflyer(AbstractSource):
     def check_connection(self, logger, config) -> Tuple[bool, any]:
@@ -342,4 +361,6 @@ class SourceAppsflyer(AbstractSource):
             RetargetingPartnersReport(authenticator=auth, **config),
             RetargetingDailyReport(authenticator=auth, **config),
             RetargetingGeoReport(authenticator=auth, **config),
+            OrganicInstalls(authenticator=auth, **config),
+            OrganicUninstallEvents(authenticator=auth, **config),
         ]

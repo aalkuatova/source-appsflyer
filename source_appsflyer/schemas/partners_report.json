@@ -1,6 +1,10 @@
 {
   "type": "object",
   "properties": {
+    "date": {
+      "type": ["null", "string"],
+      "format": "date"
+    },
     "af_prt": {
       "type": ["null", "string"]
     },

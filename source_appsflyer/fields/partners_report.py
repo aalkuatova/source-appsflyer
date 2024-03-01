@@ -4,6 +4,7 @@
 
 # This order matters
 main_fields = (
+    "date",
     "af_prt",
     "media_source",
     "campaign",
