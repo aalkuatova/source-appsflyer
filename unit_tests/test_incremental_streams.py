@@ -20,6 +20,7 @@ from source_appsflyer.source import (
     RetargetingInAppEvents,
     RetargetingPartnersReport,
     UninstallEvents,
+    OrganicInAppEvents,
     OrganicInstalls,
     OrganicUninstallEvents,
 )
@@ -48,6 +49,7 @@ def patch_incremental_base_class(mocker):
         (RetargetingPartnersReport, "date"),
         (RetargetingDailyReport, "date"),
         (RetargetingGeoReport, "date"),
+        (OrganicInAppEvents, "event_time"),
         (OrganicUninstallEvents, "event_time"),
         (OrganicInstalls, "install_time"),
     ],
@@ -72,6 +74,7 @@ def test_cursor_field(patch_incremental_base_class, mocker, class_, expected_cur
         (RetargetingPartnersReport, "date", True, None, True, None),
         (RetargetingDailyReport, "date", True, None, True, None),
         (RetargetingGeoReport, "date", True, None, True, None),
+        (OrganicInAppEvents, "event_time", False, fields.raw_data.additional_fields, None, "preferred"),
         (OrganicUninstallEvents, "event_time", False, fields.uninstall_events.additional_fields, None, "preferred"),
         (OrganicInstalls, "install_time", False, fields.raw_data.additional_fields, None, "preferred"),
     ],
